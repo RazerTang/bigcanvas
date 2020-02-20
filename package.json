@@ -1,7 +1,7 @@
 {
   "name": "bigcanvas",
   "version": "0.1.0",
-  "homepage": "https://razertang.github.io/",
+  "homepage": "https://razertang.github.io/bigcanvas",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
