@@ -961,10 +961,6 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@microsoft/load-themed-styles@^1.10.26":
-  version "1.10.37"
-  resolved "https://registry.npm.taobao.org/@microsoft/load-themed-styles/download/@microsoft/load-themed-styles-1.10.37.tgz#1ccac00b7b13448aa2a5cfdbc03baa0422f421d9"
-
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.npm.taobao.org/@mrmlnc/readdir-enhanced/download/@mrmlnc/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -1270,64 +1266,6 @@
     lodash "^4.17.15"
     semver "^6.3.0"
     tsutils "^3.17.1"
-
-"@uifabric/foundation@^7.5.13":
-  version "7.5.13"
-  resolved "https://registry.npm.taobao.org/@uifabric/foundation/download/@uifabric/foundation-7.5.13.tgz#918eda54aff53809408c3ef021b2acc3aca68713"
-  dependencies:
-    "@uifabric/merge-styles" "^7.8.6"
-    "@uifabric/set-version" "^7.0.5"
-    "@uifabric/styling" "^7.10.13"
-    "@uifabric/utilities" "^7.12.4"
-    tslib "^1.10.0"
-
-"@uifabric/icons@^7.3.12":
-  version "7.3.12"
-  resolved "https://registry.npm.taobao.org/@uifabric/icons/download/@uifabric/icons-7.3.12.tgz#e54d57ea66a8a43cb613daa5655d59a47be1f142"
-  dependencies:
-    "@uifabric/set-version" "^7.0.5"
-    "@uifabric/styling" "^7.10.13"
-    tslib "^1.10.0"
-
-"@uifabric/merge-styles@^7.8.6":
-  version "7.8.6"
-  resolved "https://registry.npm.taobao.org/@uifabric/merge-styles/download/@uifabric/merge-styles-7.8.6.tgz#798f263de7ec5f509422607ed1fd76c06fb65ac2"
-  dependencies:
-    "@uifabric/set-version" "^7.0.5"
-    tslib "^1.10.0"
-
-"@uifabric/react-hooks@^7.0.14":
-  version "7.0.14"
-  resolved "https://registry.npm.taobao.org/@uifabric/react-hooks/download/@uifabric/react-hooks-7.0.14.tgz#16b729c6df159182f854884b22a1cee50fdf66a3"
-  dependencies:
-    "@uifabric/set-version" "^7.0.5"
-    "@uifabric/utilities" "^7.12.4"
-    tslib "^1.10.0"
-
-"@uifabric/set-version@^7.0.5":
-  version "7.0.5"
-  resolved "https://registry.npm.taobao.org/@uifabric/set-version/download/@uifabric/set-version-7.0.5.tgz#6d3232c47119c9180a3014098d54c639f73bc02a"
-  dependencies:
-    tslib "^1.10.0"
-
-"@uifabric/styling@^7.10.13":
-  version "7.10.13"
-  resolved "https://registry.npm.taobao.org/@uifabric/styling/download/@uifabric/styling-7.10.13.tgz#0edff40908b079ec4d613e666920806678e2db78"
-  dependencies:
-    "@microsoft/load-themed-styles" "^1.10.26"
-    "@uifabric/merge-styles" "^7.8.6"
-    "@uifabric/set-version" "^7.0.5"
-    "@uifabric/utilities" "^7.12.4"
-    tslib "^1.10.0"
-
-"@uifabric/utilities@^7.12.4":
-  version "7.12.4"
-  resolved "https://registry.npm.taobao.org/@uifabric/utilities/download/@uifabric/utilities-7.12.4.tgz#ac224dad1cf590b4805efbe7a080f4d35d3b2eec"
-  dependencies:
-    "@uifabric/merge-styles" "^7.8.6"
-    "@uifabric/set-version" "^7.0.5"
-    prop-types "^15.7.2"
-    tslib "^1.10.0"
 
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
@@ -4471,10 +4409,6 @@ immer@1.10.0:
   version "1.10.0"
   resolved "https://registry.npm.taobao.org/immer/download/immer-1.10.0.tgz#bad67605ba9c810275d91e1c2a47d4582e98286d"
 
-immutable@^3.8.1:
-  version "3.8.2"
-  resolved "https://registry.npm.taobao.org/immutable/download/immutable-3.8.2.tgz#c2439951455bb39913daf281376f1530e104adf3"
-
 import-cwd@^2.0.0:
   version "2.1.0"
   resolved "https://registry.npm.taobao.org/import-cwd/download/import-cwd-2.1.0.tgz#aa6cf36e722761285cb371ec6519f53e2435b0a9"
@@ -5459,10 +5393,6 @@ jsx-ast-utils@^2.2.1, jsx-ast-utils@^2.2.3:
     array-includes "^3.0.3"
     object.assign "^4.1.0"
 
-keymirror@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.npm.taobao.org/keymirror/download/keymirror-0.1.1.tgz#918889ea13f8d0a42e7c557250eee713adc95c35"
-
 killable@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npm.taobao.org/killable/download/killable-1.0.1.tgz#4c8ce441187a061c7474fb87ca08e2a638194892"
@@ -6172,12 +6102,6 @@ nth-check@^1.0.2, nth-check@~1.0.1:
   dependencies:
     boolbase "~1.0.0"
 
-nuclear-js@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.npm.taobao.org/nuclear-js/download/nuclear-js-1.4.0.tgz#6c9c001b0673f0ae9d8f8b188c4da04ed693a7be"
-  dependencies:
-    immutable "^3.8.1"
-
 num2fraction@^1.2.2:
   version "1.2.2"
   resolved "https://registry.npm.taobao.org/num2fraction/download/num2fraction-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"
@@ -6284,21 +6208,6 @@ object.values@^1.1.0, object.values@^1.1.1:
 obuf@^1.0.0, obuf@^1.1.2:
   version "1.1.2"
   resolved "https://registry.npm.taobao.org/obuf/download/obuf-1.1.2.tgz#09bea3343d41859ebd446292d11c9d4db619084e"
-
-office-ui-fabric-react@^7.95.0:
-  version "7.95.0"
-  resolved "https://registry.npm.taobao.org/office-ui-fabric-react/download/office-ui-fabric-react-7.95.0.tgz#0865fb98e4e65dab093122d6d200f5a3cb323adb"
-  dependencies:
-    "@microsoft/load-themed-styles" "^1.10.26"
-    "@uifabric/foundation" "^7.5.13"
-    "@uifabric/icons" "^7.3.12"
-    "@uifabric/merge-styles" "^7.8.6"
-    "@uifabric/react-hooks" "^7.0.14"
-    "@uifabric/set-version" "^7.0.5"
-    "@uifabric/styling" "^7.10.13"
-    "@uifabric/utilities" "^7.12.4"
-    prop-types "^15.7.2"
-    tslib "^1.10.0"
 
 on-finished@~2.3.0:
   version "2.3.0"
