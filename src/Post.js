@@ -12,11 +12,11 @@ export default class Post extends fabric.Rect {
         });
     }
 
-    onSelect(){
+    onSelect() {
         this.backgroundColor = '#00A2FF';
     }
 
-    onDeselect(){
+    onDeselect() {
         this.backgroundColor = '#00A2FF00';
     }
 }
