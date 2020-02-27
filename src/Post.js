@@ -26,6 +26,7 @@ export default class Post {
         this.width = 100;
         this.height = 100;
         this.lines = 2;
+        this.isActived = false;
 
         this.init(props);
         this.textbox.on('mousedown', (e) => {
@@ -95,6 +96,7 @@ export default class Post {
 
         this.rect.backgroundColor = '#00A2FF';
         this.textbox.enterEditing();
+        this.isActived = true;
     }
 
     /**
@@ -109,5 +111,10 @@ export default class Post {
         this.canvas.add(this.group);
 
         this.rect.backgroundColor = '#00A2FF00';
+        this.isActived = false;
+    }
+
+    isActived() {
+        return this.isActived;
     }
 }

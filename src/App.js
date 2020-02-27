@@ -14,15 +14,22 @@ export default class Canvas extends React.Component {
       if (options.repeat) {
         return;
       }
-
+      let hasActivedObject = false;
       var key = options.which || options.keyCode; // key detection
 
-      if (fabricCanvas.getActiveObject()) {
+      //active object可能是选中的Post or 正在输入的TextBox
+      const ao = fabricCanvas.getActiveObject();
+      if (ao) {
+        hasActivedObject = true;
         const post = fabricCanvas.getActiveObject().data;
         if (post) {
           post.active();
         }
       }
+      if (hasActivedObject) {
+        return;
+      }
+
       //在文字编辑状态是不能删除post
       if (key === 8) {
         fabricCanvas.remove(fabricCanvas.getActiveObject());
@@ -35,37 +42,7 @@ export default class Canvas extends React.Component {
       } else {
       }
     });
-    // fabricCanvas.getActiveObject().toGroup();
-
-    // fabricCanvas.on({
-    //   'touch:gesture': function () {
-    //   },
-    //   'touch:drag': function () {
-    //     alert('move');
-    //   },
-    //   'touch:orientation': function () {
-    //   },
-    //   'touch:shake': function () {
-    //   },
-    //   'touch:longpress': function () {
-    //   }
-    // });
-
-    // fabricCanvas.on('mouse:up', (e) => {
-    //   alert('up');
-    // });
-
-
-    // let textbox = new fabric.Textbox('Lorum ipsum dolor sit amet', {
-    //   left: 50,
-    //   top: 50,
-    //   width: 150,
-    //   fontSize: 20
-    // });
-    // let group = new fabric.Group([textbox]);
-    // fabricCanvas.add(group);
   }
-
 
   render() {
     return (
