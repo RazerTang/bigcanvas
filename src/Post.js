@@ -27,6 +27,7 @@ export default class Post {
         this.height = 100;
         this.lines = 2;
         this.isActived = false;
+        this.strokeWidth = 5;
 
         this.init(props);
         this.textbox.on('mousedown', (e) => {
@@ -54,7 +55,8 @@ export default class Post {
             ...frame,
             fill: '#FFF09A',
             hasControls: false,
-            strokeWidth: 5,
+            stroke: '#00A2FF',
+            strokeWidth: this.strokeWidth,
         });
 
         const LimitedTextbox = fabric.util.createClass(fabric.Textbox, {
@@ -95,16 +97,18 @@ export default class Post {
         this.canvas.add(this.textbox);
         this.canvas.setActiveObject(this.textbox);
 
-        this.rect.backgroundColor = '#00A2FF';
+        this.rect.set("strokeWidth", this.strokeWidth);
+
         this.textbox.enterEditing();
         this.isActived = true;
-        console.log('active');
     }
 
     /**
      * unactive的条件为文字编辑状态消失的时候
      */
     unactive() {
+        this.rect.set("strokeWidth", 0);
+
         this.canvas.remove(this.rect);
         this.canvas.remove(this.textbox);
 
@@ -112,9 +116,8 @@ export default class Post {
         this.group.addWithUpdate(this.textbox);
         this.canvas.add(this.group);
 
-        this.rect.backgroundColor = '#00A2FF00';
+
         this.isActived = false;
-        console.log('unactive');
     }
 
     isActived() {

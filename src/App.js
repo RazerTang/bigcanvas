@@ -23,7 +23,6 @@ export default class Canvas extends React.Component {
       const ao = fabricCanvas.getActiveObject();
       if (ao) {
         const type = ao.get('type');
-        console.log(ao.get('type'));
         if (type === 'textbox') {
           //直接触发文本框的编辑,开始输入文字
         } else if (type === 'group') {
@@ -46,7 +45,7 @@ export default class Canvas extends React.Component {
 
     fabricCanvas.on('mouse:dblclick', (e) => {
       if (!e.target) {
-        var post = new Post({ x: e.pointer.x, y: e.pointer.y, canvas: fabricCanvas });
+        new Post({ x: e.pointer.x, y: e.pointer.y, canvas: fabricCanvas });
       } else {
       }
     });
