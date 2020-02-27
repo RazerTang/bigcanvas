@@ -54,6 +54,7 @@ export default class Post {
             ...frame,
             fill: '#FFF09A',
             hasControls: false,
+            strokeWidth: 5,
         });
 
         const LimitedTextbox = fabric.util.createClass(fabric.Textbox, {
@@ -97,6 +98,7 @@ export default class Post {
         this.rect.backgroundColor = '#00A2FF';
         this.textbox.enterEditing();
         this.isActived = true;
+        console.log('active');
     }
 
     /**
@@ -112,6 +114,7 @@ export default class Post {
 
         this.rect.backgroundColor = '#00A2FF00';
         this.isActived = false;
+        console.log('unactive');
     }
 
     isActived() {
