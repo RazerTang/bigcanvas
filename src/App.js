@@ -23,6 +23,7 @@ export default class Canvas extends React.Component {
       const ao = fabricCanvas.getActiveObject();
       if (ao) {
         const type = ao.get('type');
+        console.log(type);
         if (type === 'textbox') {
           //直接触发文本框的编辑,开始输入文字
         } else if (type === 'group') {
@@ -36,9 +37,11 @@ export default class Canvas extends React.Component {
             post.active();
           }
         } else if (type === 'activeSelection') {
-          fabricCanvas.getActiveObjects().forEach((obj) => {
-            fabricCanvas.remove(obj)
-          });
+          if (key === 8) {
+            fabricCanvas.getActiveObjects().forEach((obj) => {
+              fabricCanvas.remove(obj)
+            });
+          }
         }
       }
     });
@@ -49,11 +52,24 @@ export default class Canvas extends React.Component {
       } else {
       }
     });
+
+    //选择的时候会误判进入这个状态，导致post的背景色设置不上
+    //TODO 
+    fabricCanvas.on({
+      'object:moving': function (e) {
+        e.target.opacity = 0.5;
+        console.log('moving');
+      },
+      'object:modified': function (e) {
+        e.target.opacity = 1;
+        console.log('modified');
+      }
+    });
   }
 
   render() {
     return (
-      <div className='bcContainer'>
+      <div className='bcContainer' >
         <canvas className='c' id='c' />
       </div>
     )

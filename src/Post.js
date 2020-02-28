@@ -28,16 +28,38 @@ export default class Post {
         this.lines = 2;
         this.isActived = false;
         this.strokeWidth = 5;
+        this.fontSize = 10;
 
         this.init(props);
-        this.textbox.on('mousedown', (e) => {
-            this.active();
+
+        var timer = 0;
+        this.group.on('mouseup', () => {
+            var d = new Date();
+            timer = d.getTime();
+        });
+        this.group.on('mousedown', () => {
+            var d = new Date();
+            if ((d.getTime() - timer) < 300) {
+                this.active();
+            } else {
+                //鼠标按下去的时候 设置背景色
+                this.rect.set("strokeWidth", this.strokeWidth);
+            }
         });
 
+        //鼠标抬起来的时候 取消背景色
+        this.group.on('mouseup', () => {
+            this.rect.set("strokeWidth", 0);
+        });
+
+        this.textbox.on('changed', (e) => {
+        });
+
+        this.textbox.on('editing:entered', (e) => {
+        });
         this.textbox.on('editing:exited', (e) => {
             this.unactive();
         });
-
     }
 
     init(props) {
@@ -51,8 +73,16 @@ export default class Post {
             height: this.height
         };
 
+        const config = {
+            lockScalingY: true,
+            lockScalingX: true,
+            lockUniScaling: true,
+            lockRotation: true,
+        }
+
         this.rect = new fabric.Rect({
             ...frame,
+            ...config,
             fill: '#FFF09A',
             hasControls: false,
             stroke: '#00A2FF',
@@ -66,19 +96,20 @@ export default class Post {
 
         this.textbox = new LimitedTextbox('', {
             ...frame,
+            ...config,
             width: this.width,
             top: props.y,
-            fontSize: 30,
-            // textAlign: 'center',
+            fontSize: this.fontSize,
+            textAlign: 'center',
             // textBaseline: 'middle',
             fill: '#000',
             hasBorders: false,
             breakWords: true,
         });
 
-
-        this.group = new fabric.Group();
+        this.group = new fabric.Group([], { ...config });
         this.group.data = this;
+
 
         this.active();
     }
@@ -89,6 +120,9 @@ export default class Post {
      * 2.选中该group并输入文字的时候
      */
     active() {
+        if (this.isActived) {
+            return;
+        }
         this.group.removeWithUpdate(this.rect);
         this.group.removeWithUpdate(this.textbox);
         this.canvas.remove(this.group);
@@ -100,13 +134,18 @@ export default class Post {
         this.rect.set("strokeWidth", this.strokeWidth);
 
         this.textbox.enterEditing();
+
         this.isActived = true;
+        console.log('active');
     }
 
     /**
      * unactive的条件为文字编辑状态消失的时候
      */
     unactive() {
+        if (!this.isActived) {
+            return;
+        }
         this.rect.set("strokeWidth", 0);
 
         this.canvas.remove(this.rect);
@@ -116,8 +155,8 @@ export default class Post {
         this.group.addWithUpdate(this.textbox);
         this.canvas.add(this.group);
 
-
         this.isActived = false;
+        console.log('unactive');
     }
 
     isActived() {
