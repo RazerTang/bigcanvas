@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/bigcanvas/static/css/main.4c1e564f.chunk.css",
-    "main.js": "/bigcanvas/static/js/main.d0588626.chunk.js",
-    "main.js.map": "/bigcanvas/static/js/main.d0588626.chunk.js.map",
+    "main.css": "/bigcanvas/static/css/main.a220c3cb.chunk.css",
+    "main.js": "/bigcanvas/static/js/main.58ae0301.chunk.js",
+    "main.js.map": "/bigcanvas/static/js/main.58ae0301.chunk.js.map",
     "runtime-main.js": "/bigcanvas/static/js/runtime-main.853d9bcb.js",
     "runtime-main.js.map": "/bigcanvas/static/js/runtime-main.853d9bcb.js.map",
     "static/js/2.6261d70a.chunk.js": "/bigcanvas/static/js/2.6261d70a.chunk.js",
     "static/js/2.6261d70a.chunk.js.map": "/bigcanvas/static/js/2.6261d70a.chunk.js.map",
     "index.html": "/bigcanvas/index.html",
-    "precache-manifest.76cf5f31b41ab9c704d242298d8e6795.js": "/bigcanvas/precache-manifest.76cf5f31b41ab9c704d242298d8e6795.js",
+    "precache-manifest.10468b5ba2e09f989c26d8f0ca1cc9ea.js": "/bigcanvas/precache-manifest.10468b5ba2e09f989c26d8f0ca1cc9ea.js",
     "service-worker.js": "/bigcanvas/service-worker.js",
-    "static/css/main.4c1e564f.chunk.css.map": "/bigcanvas/static/css/main.4c1e564f.chunk.css.map",
+    "static/css/main.a220c3cb.chunk.css.map": "/bigcanvas/static/css/main.a220c3cb.chunk.css.map",
     "static/js/2.6261d70a.chunk.js.LICENSE.txt": "/bigcanvas/static/js/2.6261d70a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.853d9bcb.js",
     "static/js/2.6261d70a.chunk.js",
-    "static/css/main.4c1e564f.chunk.css",
-    "static/js/main.d0588626.chunk.js"
+    "static/css/main.a220c3cb.chunk.css",
+    "static/js/main.58ae0301.chunk.js"
   ]
 }
