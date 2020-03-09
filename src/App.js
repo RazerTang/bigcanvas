@@ -5,10 +5,8 @@ import BigCanvas from './canvas'
 export default class App extends React.Component {
 
   componentDidMount() {
-    const canvas = document.getElementById('c');
-    const container = document.getElementById('bcContainer');
     //{ 'canvas':canvas } 不行?
-    let bc = new BigCanvas(canvas);
+    let bc = new BigCanvas('mycanvas');
 
     document.addEventListener('keydown', (function (event) {
       //mac metaKey
@@ -29,14 +27,15 @@ export default class App extends React.Component {
     window.addEventListener('mousewheel', event => {
       if (event.ctrlKey === true) {
         event.preventDefault()
+        bc.zoom(event);
       }
     }, { passive: false });
   }
 
   render() {
     return (
-      <div className='bcContainer' id='bcContainer' >
-        <canvas className='c' id='c' />
+      <div class="container">
+        <canvas id="mycanvas" ></canvas>
       </div>
     )
   }

@@ -1,5 +1,5 @@
-
-.bcContainer {
-  background-color:Green; height:1024 ; width:1024; overflow-y: scroll;
+.container {
+  overflow-y: scroll;
+  width: 1024px;
+  height: 1024px;
 }
-

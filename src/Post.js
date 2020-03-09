@@ -1,24 +1,5 @@
 import { fabric } from 'fabric'
 
-// fabric.Text.prototype.calcTextHeight = function () {
-//     var lineHeight, height = 0;
-//     for (var i = 0, len = this._textLines.length; i < len; i++) {
-//         lineHeight = this.getHeightOfLine(i);
-//         height += lineHeight;
-//     }
-//     return height;
-// };
-
-// fabric.Text.prototype.getMaxTextWidth = function () {
-//     var maxWidth = this.getLineWidth(0)
-//     for (var i = 0, len = this._textLines.length; i < len; i++) {
-//         maxWidth = Math.max(maxWidth, this.getLineWidth(i));
-
-//     }
-//     return maxWidth;
-// }
-
-
 
 export default class Post {
 
