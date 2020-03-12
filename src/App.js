@@ -9,15 +9,10 @@ export default class App extends React.Component {
     let bc = new BigCanvas('mycanvas');
 
     document.addEventListener('keydown', (function (event) {
-      //mac metaKey
-      //pc ctrKey
-      if (event.metaKey === true) {
+      //屏蔽浏览器响应空格键的默认行为
+      if (event.which === 32) {
         event.preventDefault();
-        if (event.which === 187) {
-          bc.zoomOut();
-        } else if (event.which === 189) {
-          bc.zoomIn();
-        }
+        event.stopPropagation();
       }
     }));
 
@@ -26,7 +21,8 @@ export default class App extends React.Component {
     //event.deltaY 放大为负 缩小为正
     window.addEventListener('mousewheel', event => {
       if (event.ctrlKey === true) {
-        event.preventDefault()
+        event.preventDefault();
+        event.stopPropagation();
         bc.zoom(event);
       }
     }, { passive: false });
@@ -34,8 +30,8 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div class="container">
-        <canvas id="mycanvas" ></canvas>
+      <div className="container">
+        <canvas className="mycanvas" id="mycanvas" ></canvas>
       </div>
     )
   }

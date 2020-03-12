@@ -1,5 +1,10 @@
 .container {
   overflow-y: scroll;
-  width: 1024px;
-  height: 1024px;
+  width: 1980;
+  height: 1080;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
