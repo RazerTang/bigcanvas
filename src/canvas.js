@@ -14,6 +14,7 @@ export default class BigCanvas {
         this.isSpaceKeyDown = false;
         this.isMouseDown = false;
         this.preMouseDownPt = null;
+        this.currentPostColor = '#FFF09A';
         this.fabricCanvas = new fabric.Canvas(props, { width: this.originWidth, height: this.originHeight, backgroundColor: this.backgroundColor });
 
         fabric.util.addListener(document.body, 'keyup', (options) => {
@@ -82,7 +83,7 @@ export default class BigCanvas {
         this.fabricCanvas.on('mouse:dblclick', (e) => {
             if (!e.target) {
                 const pointer = this.fabricCanvas.getPointer(e.e);
-                new Post({ x: pointer.x, y: pointer.y, canvas: this.fabricCanvas });
+                new Post({ x: pointer.x, y: pointer.y, canvas: this.fabricCanvas, postColor: this.currentPostColor });
             } else {
             }
         });
@@ -90,7 +91,7 @@ export default class BigCanvas {
         this.fabricCanvas.on('mouse:down', e => {
             this.isMouseDown = true;
             this.preMouseDownPt = e.pointer;
-            console.log('down');
+            console.log('down=' + e.button);
         });
 
         this.fabricCanvas.on('mouse:move', e => {
@@ -100,6 +101,7 @@ export default class BigCanvas {
                 this.preMouseDownPt = e.pointer;
                 console.log(`units=${units}`);
                 this.fabricCanvas.relativePan(new fabric.Point(units, 0));
+                console.log('left' + this.fabricCanvas.get('left') + 'width=' + this.fabricCanvas.width);
             }
         });
 
@@ -107,7 +109,6 @@ export default class BigCanvas {
             this.isMouseDown = false;
             console.log('up');
         });
-
 
         //选择的时候会误判进入这个状态，导致post的背景色设置不上
         //TODO 
@@ -161,5 +162,21 @@ export default class BigCanvas {
         this.fabricCanvas.setZoom(factor);
         this.fabricCanvas.setWidth(this.originWidth * this.zoomFactor);
         this.fabricCanvas.setHeight(this.originHeight * this.zoomFactor);
+    }
+
+    rightClick(event) {
+        const objects = this.fabricCanvas.getActiveObjects();
+        if (objects.length > 0) {
+
+        }
+        // const opt = this.fabricCanvas.getPointer(event);
+        // var objects = this.fabricCanvas.getObjects();
+        // for (var i = objects.length - 1; i >= 0; i--) {
+        //     var object = objects[i];
+        //     //判断该对象是否在鼠标点击处
+        //     if (this.fabricCanvas.containsPoint(event, object)) {
+        //         //选中该对象
+        //     }
+        // }
     }
 }

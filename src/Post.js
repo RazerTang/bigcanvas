@@ -1,6 +1,5 @@
 import { fabric } from 'fabric'
 
-
 export default class Post {
 
     constructor(props) {
@@ -8,6 +7,7 @@ export default class Post {
         this.height = 100;
         this.lines = 2;
         this.isActived = false;
+        this.isSelected = false;
         this.strokeWidth = 5;
         this.fontSize = 10;
 
@@ -64,7 +64,7 @@ export default class Post {
         this.rect = new fabric.Rect({
             ...frame,
             ...config,
-            fill: '#FFF09A',
+            fill: props.postColor,
             hasControls: false,
             stroke: '#00A2FF',
             strokeWidth: this.strokeWidth,
@@ -83,7 +83,7 @@ export default class Post {
             fontSize: this.fontSize,
             textAlign: 'center',
             // textBaseline: 'middle',
-            fill: '#000',
+            // fill: '#f00',
             hasBorders: false,
             breakWords: true,
         });
@@ -91,12 +91,32 @@ export default class Post {
         this.group = new fabric.Group([], { ...config });
         this.group.data = this;
 
-
         this.active();
     }
 
     /**
-     * active可以激活的两个图形
+     * selected状态是rect被选中，但没有开始编辑文字
+     * 如果文字已开始编辑，则光标暂停
+     */
+    selected() {
+        if (this.isSelected === true) {
+            return;
+        }
+        this.selected = true;
+    }
+
+    /**
+     * 与selected状态相反
+     */
+    unselected() {
+        if (this.selected === false) {
+            return;
+        }
+        this.selected = false;
+    }
+
+    /**
+     * active状态是post背景并且开始编辑文本框
      * 1.创建的时候
      * 2.选中该group并输入文字的时候
      */
@@ -121,7 +141,7 @@ export default class Post {
     }
 
     /**
-     * unactive的条件为文字编辑状态消失的时候
+     * rect去除选中
      */
     unactive() {
         if (!this.isActived) {

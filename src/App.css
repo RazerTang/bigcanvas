@@ -1,4 +1,4 @@
-.container {
+ .container {
   overflow-y: scroll;
   width: 1980;
   height: 1080;
@@ -6,5 +6,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
+} 
+
+.toolbox-container {
+  position:absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 200px;
+  background: #93BABC;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.toolbox-attr {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.toolbox-checkbox {
+  position: absolute;
 }
 
