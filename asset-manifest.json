@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/bigcanvas/static/css/main.45393226.chunk.css",
-    "main.js": "/bigcanvas/static/js/main.40b9b5c8.chunk.js",
-    "main.js.map": "/bigcanvas/static/js/main.40b9b5c8.chunk.js.map",
+    "main.css": "/bigcanvas/static/css/main.2b90bcd5.chunk.css",
+    "main.js": "/bigcanvas/static/js/main.671f72e9.chunk.js",
+    "main.js.map": "/bigcanvas/static/js/main.671f72e9.chunk.js.map",
     "runtime-main.js": "/bigcanvas/static/js/runtime-main.853d9bcb.js",
     "runtime-main.js.map": "/bigcanvas/static/js/runtime-main.853d9bcb.js.map",
-    "static/js/2.6261d70a.chunk.js": "/bigcanvas/static/js/2.6261d70a.chunk.js",
-    "static/js/2.6261d70a.chunk.js.map": "/bigcanvas/static/js/2.6261d70a.chunk.js.map",
+    "static/js/2.6c437164.chunk.js": "/bigcanvas/static/js/2.6c437164.chunk.js",
+    "static/js/2.6c437164.chunk.js.map": "/bigcanvas/static/js/2.6c437164.chunk.js.map",
     "index.html": "/bigcanvas/index.html",
-    "precache-manifest.cf36e9ac3b281ab7d76fc4af5015cb9b.js": "/bigcanvas/precache-manifest.cf36e9ac3b281ab7d76fc4af5015cb9b.js",
+    "precache-manifest.c3585fa47693d7a2697675046efab051.js": "/bigcanvas/precache-manifest.c3585fa47693d7a2697675046efab051.js",
     "service-worker.js": "/bigcanvas/service-worker.js",
-    "static/css/main.45393226.chunk.css.map": "/bigcanvas/static/css/main.45393226.chunk.css.map",
-    "static/js/2.6261d70a.chunk.js.LICENSE.txt": "/bigcanvas/static/js/2.6261d70a.chunk.js.LICENSE.txt"
+    "static/css/main.2b90bcd5.chunk.css.map": "/bigcanvas/static/css/main.2b90bcd5.chunk.css.map",
+    "static/js/2.6c437164.chunk.js.LICENSE.txt": "/bigcanvas/static/js/2.6c437164.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.853d9bcb.js",
-    "static/js/2.6261d70a.chunk.js",
-    "static/css/main.45393226.chunk.css",
-    "static/js/main.40b9b5c8.chunk.js"
+    "static/js/2.6c437164.chunk.js",
+    "static/css/main.2b90bcd5.chunk.css",
+    "static/js/main.671f72e9.chunk.js"
   ]
 }
